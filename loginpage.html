@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    function mypass1() {
+    var x = document.getElementById("pwd");
+    if (x.type === "password") {
+            x.type = "text";
+       } 
+    else {
+           x.type = "password";
+           }
+    }
+  </script>
+</head>
+<body>
+<div class="container">
+  <!-- <center><h1 style="color: green; font-size: 30px;">Online City Details</h1></center> -->
+  <h2>Log In</h2>
+  <form action="/login" method="Post">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required="">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required="">
+      <div class="checkbox">
+    <label><input type="checkbox" onclick="mypass1()"> Show password</label>
+  </div>
+    </div>
+    <button type="submit" class="btn btn-success">Login</button>
+    <!-- <a href="register" class="btn btn-info" role="button">Create Account</a>
+    <a href="#" class="btn btn-danger" role="button">Forgot password</a> -->
+  </form>
+  <br>
+   
+</div>
+
+</body>
+</html>

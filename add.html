@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+      function myfun(){
+        alert("Register successfull!!");
+      }
+      function myfun2(){
+        alert("Register successfull!!");
+      }
+      function myfun3(){
+        alert("Register successfull!!");
+      }
+  </script>
+</head>
+<body>
+<div class="container">
+   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="/">PURI(ODISHA)</a>
+
+  <ul class="navbar-nav">
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        TOURISM
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/tplace">TOURIST PLACE</a>
+        <a class="dropdown-item" href="/acco">ACCOMODATION</a>
+        <a class="dropdown-item" href="/place">PLACE OF INTEREST</a>
+      </div>
+    </li>
+  </ul>
+ </nav> 
+<div>
+<h2 style="margin-top: 20px;">ADD PLACE OF INTEREST</h2>
+<form action="/placeinsert" class="was-validated" method="POST">
+    <div class="form-group">
+      <label for="uname">Place:</label>
+      <input type="text" class="form-control" id="uname" placeholder="Enter place" name="place" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="pwd">description:</label>
+      <input type="textarea" class="form-control" id="pwd" name="description" placeholder="Enter description" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember" required> I agree
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Check this checkbox to continue.</div>
+      </label>
+    </div>
+    <button type="submit" class="btn btn-success" onclick="myfun()">Add place</button>
+  </form>
+  <h2 style="margin-top: 20px;">ADD ACCOMODATION</h2>
+<form action="/accoadd" class="was-validated" method="POST">
+    <div class="form-group">
+      <label for="uname">RESTAURANT NAME:</label>
+      <input type="text" class="form-control" id="uname" placeholder="Enter restuarant name" name="rname" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="pwd">PHONE</label>
+      <input type="textarea" class="form-control" id="pwd" placeholder="Enter phone" name="phone" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="pwd">EMAIL</label>
+      <input type="textarea" class="form-control" id="pwd" name="email" placeholder="Enter phone" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="pwd">ADDRESS</label>
+      <input type="textarea" class="form-control" id="pwd" name="addr"placeholder="Enter phone" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="pwd">WEBSITE</label>
+      <input type="textarea" class="form-control" id="pwd" name="web" placeholder="Enter phone" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember" required> I agree
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Check this checkbox to continue.</div>
+      </label>
+    </div>
+    <button type="submit" class="btn btn-success" style="margin-bottom: 40px;" onclick="myfun2()">Add place</button>
+  </form>
+  
+  <h2 style="margin-top: 5px;">ADD TOURIST PLACE</h2>
+<form action="/tplaceinsert" method="POST" class="was-validated">
+    <div class="form-group">
+      <label for="uname">PLACE</label>
+      <input type="text" class="form-control" id="uname" placeholder="Enter place" name="place" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="pwd">DESCRIPTION</label>
+      <input type="textarea" class="form-control" id="pwd" placeholder="Enter description" name="desc" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember" required> I agree
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Check this checkbox to continue.</div>
+      </label>
+    </div>
+    <button type="submit" class="btn btn-success" style="margin-bottom: 40px;" onclick="myfun3()">Add place</button>
+  </form>
+</div>
+</div>
+</body>
+</html>

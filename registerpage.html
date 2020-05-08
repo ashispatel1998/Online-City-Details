@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Register</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script>
+function validateForm() {
+  var pwd1 = document.forms["myForm"]["pwd"].value;
+  var pwd2 = document.forms["myForm"]["cnfpwd"].value;
+  if (pwd1 != pwd2) {
+    alert("password incorrect");
+    return false;
+  }
+}
+function mypass1() {
+  var x = document.getElementById("pwd");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+function mypass2() {
+  var x = document.getElementById("cnfpwd");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+</head>
+<body>
+ 
+<div class="container">
+  <center><h1 style="color: green; font-size: 30px;">Online City Details</h1></center>
+  <h2>Create Account</h2>
+  <form action="/reg" method="Post" name="myForm" onsubmit="return validateForm()">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required="">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Name:</label>
+      <input type="text" class="form-control" id="user" placeholder="Enter full name" name="user" required="">
+    </div>
+    <div class="form-group">
+      <label for="date">Date of birth:</label>
+      <input type="date" class="form-control" id="dob" placeholder="Enter Dob" name="dob" required="">
+    </div>
+    <div class="form-group">
+      <label for="number">Mobile:</label>
+      <input type="Mobile" class="form-control" id="mob" placeholder="Enter mobile number" name="mob" required="">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters">
+      <div class="checkbox">
+    <label><input type="checkbox" onclick="mypass1()"> Show password</label>
+  </div>
+    </div>
+     <div class="form-group">
+      <label for="pwd">Confirm Password:</label>
+      <input type="password" class="form-control" id="cnfpwd" placeholder="Enter password" name="cnfpwd" required="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters">
+      <div class="checkbox">
+    <label><input type="checkbox" onclick="mypass2()"> show password</label>
+  </div>
+    </div>
+    <button type="submit" class="btn btn-success">Create</button>
+    <a href="/" class="btn btn-info" role="button">Login</a>
+  </form>
+  <br>
+   
+</div>
+
+</body>
+</html>
